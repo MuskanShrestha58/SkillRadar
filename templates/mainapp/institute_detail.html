@@ -1,0 +1,15 @@
+<!-- SkillRadar/templates/mainapp/institute_detail.html -->
+
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+  <h2>{{ institute.name }}</h2>
+  <p>{{ institute.description }}</p>
+  <h3>Courses Offered:</h3>
+  <ul>
+    {% for course in courses %}
+      <li>{{ course.title }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+

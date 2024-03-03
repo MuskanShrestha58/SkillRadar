@@ -1,0 +1,12 @@
+<!-- SkillRadar/templates/mainapp/institute_list.html -->
+
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+  <h2>Institutes</h2>
+  <ul>
+    {% for institute in institutes %}
+      <li><a href="{% url 'institute_detail' pk=institute.pk %}">{{ institute.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
